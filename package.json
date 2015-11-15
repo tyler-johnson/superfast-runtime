@@ -7,6 +7,8 @@
 		"type": "git",
 		"url": "https://github.com/tyler-johnson/superfast-runtime.git"
 	},
+	"main": "server.js",
+	"browser": "client.js",
 	"scripts": {
 		"lint": "jshint lib/*.js",
 		"build": "make",
@@ -15,7 +17,11 @@
 	"dependencies": {
 		"appcore": "~4.0.4",
 		"appcore-config": "~1.1.0",
-		"appcore-log": "~2.0.0"
+		"appcore-log": "~2.0.0",
+		"compression": "~1.6.0",
+		"domready": "~1.0.8",
+		"express": "~4.13.3",
+		"morgan": "~1.6.1"
 	},
 	"devDependencies": {
 		"jshint": "~2.8.0",

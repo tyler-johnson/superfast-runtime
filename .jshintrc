@@ -1,7 +1,7 @@
 {
 	"eqnull": true,
 	"latedef": "nofunc",
-	"undef": false,
+	"undef": true,
 	"unused": true,
 	"browserify": true,
 	"devel": true,

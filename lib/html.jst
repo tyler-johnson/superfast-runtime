@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<% if ($.styles) $.styles.forEach(function(s) { %>
+		<link rel="stylesheet" href="<%= s %>" type="text/css" /><% }); %>
+
+		<% if ($.config) {%>
+		<script type="text/javascript">$APPCONFIG=JSON.parse(atob("<%= new Buffer(JSON.stringify($.config), "utf-8").toString("base64") %>"));</script><% } %>
+		<% if ($.scripts) $.scripts.forEach(function(s) { %>
+		<script type="text/javascript" src="<%= s %>"></script><% }); %>
+	</head>
+	<body></body>
+</html>
