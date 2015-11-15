@@ -1,14 +1,22 @@
 {
-  "name": "superfast-runtime",
-  "version": "0.0.0",
-  "description": "",
-  "author": "Tyler Johnson <tyler@vintyge.com>",
-  "main": "index.js",
-  "scripts": {},
-  "dependencies": {},
-  "keywords": [],
-  "license": "MIT",
-  "devDependencies": {
-    "tape": "^4.2.2"
-  }
+	"name": "superfast-runtime",
+	"version": "0.0.0",
+	"description": "",
+	"author": "Tyler Johnson <tyler@vintyge.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tyler-johnson/superfast-runtime.git"
+	},
+	"scripts": {},
+	"dependencies": {
+		"appcore": "~4.0.4",
+		"appcore-config": "~1.1.0",
+		"appcore-log": "~2.0.0"
+	},
+	"devDependencies": {
+		"rollup": "~0.21.0",
+		"rollup-plugin-string": "~1.0.1"
+	},
+	"keywords": [],
+	"license": "MIT"
 }
