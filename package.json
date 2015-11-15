@@ -1,0 +1,14 @@
+{
+  "name": "superfast-runtime",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Tyler Johnson <tyler@vintyge.com>",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {},
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.2.2"
+  }
+}
