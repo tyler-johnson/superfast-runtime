@@ -21,7 +21,10 @@
 		"compression": "~1.6.0",
 		"domready": "~1.0.8",
 		"express": "~4.13.3",
-		"morgan": "~1.6.1"
+		"morgan": "~1.6.1",
+		"phonehome": "~0.1.0",
+		"socket.io": "~1.3.7",
+		"socket.io-client": "~1.3.7"
 	},
 	"devDependencies": {
 		"jshint": "~2.8.0",
