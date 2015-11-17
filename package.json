@@ -8,7 +8,10 @@
 		"url": "https://github.com/tyler-johnson/superfast-runtime.git"
 	},
 	"main": "server.js",
-	"browser": "client.js",
+	"browser": {
+		"./server.js": "./client.js",
+		"socket.io": "socket.io-client"
+	},
 	"scripts": {
 		"lint": "jshint lib/*.js",
 		"build": "make",
