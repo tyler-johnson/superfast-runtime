@@ -29,6 +29,7 @@
 	"devDependencies": {
 		"jshint": "~2.8.0",
 		"rollup": "~0.21.0",
+		"rollup-plugin-babel": "~1.0.0",
 		"rollup-plugin-string": "~1.0.1"
 	},
 	"keywords": [],

@@ -5,19 +5,33 @@ SRC = $(OUT:%.js=lib/%.js)
 
 build: $(OUT)
 
+define ROLLUP
+require("rollup").rollup({
+	entry: "$<",
+	plugins: [
+		require("rollup-plugin-string")({
+			extensions: [".jst"]
+		}),
+		require("rollup-plugin-babel")({
+			exclude: 'node_modules/**'
+		})
+	]
+}).then(function(bundle) {
+	var result = bundle.generate({
+		format: "cjs"
+	});
+	console.log(result.code);
+}).catch(function(e) {
+	process.nextTick(function() {
+		throw e;
+	});
+});
+endef
+
+export ROLLUP
 %.js: lib/%.js $(LIB)
 	# $< -> $@
-	@node -e "require(\"rollup\").rollup({\
-		entry: \"$<\",\
-		plugins: [ require(\"rollup-plugin-string\")({\
-	        extensions: [\".jst\"]\
-	    }) ]\
-	}).then(function(bundle) {\
-		var result = bundle.generate({\
-			format: \"cjs\"\
-		});\
-		console.log(result.code);\
-	});" > $@
+	@node -e "$$ROLLUP" > $@
 
 clean:
 	rm $(OUT)
