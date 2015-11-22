@@ -3,8 +3,6 @@ LIB = $(wildcard lib/* lib/*/*)
 OUT = client.js server.js
 SRC = $(OUT:%.js=lib/%.js)
 
-build: $(OUT)
-
 define ROLLUP
 require("rollup").rollup({
 	entry: "$<",
@@ -20,7 +18,7 @@ require("rollup").rollup({
 	var result = bundle.generate({
 		format: "cjs"
 	});
-	console.log(result.code);
+	process.stdout.write(result.code);
 }).catch(function(e) {
 	process.nextTick(function() {
 		throw e;
@@ -29,6 +27,9 @@ require("rollup").rollup({
 endef
 
 export ROLLUP
+
+build: $(OUT)
+
 %.js: lib/%.js $(LIB)
 	# $< -> $@
 	@node -e "$$ROLLUP" > $@
