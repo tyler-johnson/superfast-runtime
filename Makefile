@@ -1,6 +1,6 @@
 BIN = ./node_modules/.bin
 LIB = $(wildcard lib/* lib/*/*)
-OUT = index.js client.js server.js
+OUT = superfast.js client.js server.js
 SRC = $(OUT:%.js=lib/%.js)
 
 define ROLLUP

@@ -8,7 +8,7 @@
 		"url": "https://github.com/tyler-johnson/superfast-runtime.git"
 	},
 	"main": "server.js",
-	"superfast": "index.js",
+	"superfast": "superfast.js",
 	"browser": {
 		"./server.js": "./client.js",
 		"socket.io": "socket.io-client"
