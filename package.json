@@ -15,7 +15,6 @@
 	"scripts": {
 		"lint": "jshint lib/",
 		"build": "make",
-		"prepublish": "npm run lint && npm run build",
 		"semantic-release": "semantic-release pre && npm publish && semantic-release post"
 	},
 	"dependencies": {
